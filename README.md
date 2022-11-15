@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Web-Workshop React Teszt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A projekt csak egy üres create-react-app-s template, amiben már előre vannak telepítve a feladat elvégzéhes szükséges package-k. A feladat leírása bekezdésben van pontosan leírva, hogy mit kell implementálni.
 
-## Available Scripts
+A project **^18 vagy a feletti node verzióval** lehet elindítani és yarn package managert használ. Remélem mindenkénel telepítve van a  **nvm** (node version manager), ha mégsem akkor telepítsétek. Ellenőrizzétek le hogy jó node verziót használtok (`nvm list`, `nvm use [verzió szám]`).  Pullolás után adjátok ki a `yarn install` parancsot a projekt mappában, majd el tudjátok indítani a `yarn run start` paranccsal.
 
-In the project directory, you can run:
+## Feladat leírása
 
-### `yarn start`
+1. Hozz létre egy form-t (react-hook-form-l), ami a egy felhasználó adatait kéri be:
+- Név (max. 50 karakteres és nem tartalmazhat számokat)
+- Életkor (1-100 közötti egészszámnak kell lennie)
+- Email (valid email címnek kell hogy legyen)
+- Jelszó (minimum 6 karakteres legyen és tartalmazzon számot legalább 1 számot)
+- Jelszó megerősítés (meg kell hogy eggyezzen a 'Jelszó' field-ben lévő értékkel)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ezeket az értékeket validálni kell valamilyen resolver-l és ha hiba van valamelyik fieldben, akkor a filed alatt írja ki pirossal hogy pontosan mi a hiba. Majd ezeket az értékeket (a Jelszó megerősítés field nélkül) mentsd el redux-ba.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Hozz létre egy redux slice-t amivel a state-be el tudod menteni a felhasználók adatait. Ennek egy listának kell lennie. A reduxba csak akkor mentse el a felhasználót ha az 1.s pontban feltételeknek megfelel valamint ha még nem létezik olyan nevű felhasználó.
 
-### `yarn test`
+3. Hozz létre egy olyan redux selectort, ami egy **listában** visszaadja ezt a formázott **stringet** felhasználónként: `'Szia, {felhasználónév} ({kor}) - {email} !'`. Majd ezeket a stringeket jelenítsd meg a form alatt valahogy listázva listázva.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A feladatokat csakk akkor lehet elfogadni, a console-ban se hiba se warn nincs!
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A kész feladatokat node_modules mappa nélkül tötlsétek fel saját github-ra vagy küldjétek el nekem .zip / .rar-ban.
