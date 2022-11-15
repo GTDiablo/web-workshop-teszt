@@ -21,4 +21,6 @@ Ezeket az értékeket validálni kell valamilyen resolver-l és ha hiba van vala
 
 A feladatokat csakk akkor lehet elfogadni, a console-ban se hiba se warn nincs!
 
+Stílus és kinézet nem fontos, persze ha van idő akkor lehet plusz pont ha styled-componenteket hoztok létre.
+
 A kész feladatokat node_modules mappa nélkül tötlsétek fel saját github-ra vagy küldjétek el nekem .zip / .rar-ban.
