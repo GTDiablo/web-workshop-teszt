@@ -19,7 +19,7 @@ Ezeket az értékeket validálni kell valamilyen resolver-l és ha hiba van vala
 
 3. Hozz létre egy olyan redux selectort, ami egy **listában** visszaadja ezt a formázott **stringet** felhasználónként: `'Szia, {felhasználónév} ({kor}) - {email} !'`. Majd ezeket a stringeket jelenítsd meg a form alatt valahogy listázva listázva.
 
-A feladatokat csakk akkor lehet elfogadni, a console-ban se hiba se warn nincs!
+A feladatokat csakk akkor lehet elfogadni, ha console-ban se hiba se warn nincs!
 
 Stílus és kinézet nem fontos, persze ha van idő akkor lehet plusz pont ha styled-componenteket hoztok létre.
 
